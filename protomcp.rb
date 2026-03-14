@@ -10,7 +10,7 @@ class Protomcp < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/msilverblatt/protomcp/releases/download/v0.1.0/pmcp_darwin_amd64.tar.gz"
-      sha256 "553d3e942dcfc5333650f7921195a8df4d2ee52bad305ed86ee81517899ffcc8"
+      sha256 "d19120ba4bd490e16ad5a7d2ada7c6e8df4f7a30ff2cc1a51a37c1788c9760d1"
 
       define_method(:install) do
         bin.install "pmcp"
@@ -18,7 +18,7 @@ class Protomcp < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/msilverblatt/protomcp/releases/download/v0.1.0/pmcp_darwin_arm64.tar.gz"
-      sha256 "2eb8b939b41227fd1f80de9c8921cf97109e0c71a4f7f8937a60a5e34ff45f15"
+      sha256 "4aa7274aa37f592961239d4fb63a64e45aad94aee7991b0d93085e44a05b80cd"
 
       define_method(:install) do
         bin.install "pmcp"
@@ -29,14 +29,14 @@ class Protomcp < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/msilverblatt/protomcp/releases/download/v0.1.0/pmcp_linux_amd64.tar.gz"
-      sha256 "672762394d1d58e6cdcf8574e21b518192f58d4e8c428e34285cf176ab2ae9fb"
+      sha256 "a3f3427baf9ade191696335fe765cbbea2d09d70beaf7f90bb9a9af1d517a215"
       define_method(:install) do
         bin.install "pmcp"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/msilverblatt/protomcp/releases/download/v0.1.0/pmcp_linux_arm64.tar.gz"
-      sha256 "f5cd436fa6387f661700cb773fd88c02b836930fcfc3f45d981b0b4840ea99fb"
+      sha256 "510f5d2872a31eb5d62670e731b529cdd8896cb3f9b52f42392f65e0945c8bc9"
       define_method(:install) do
         bin.install "pmcp"
       end
