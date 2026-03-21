@@ -5,20 +5,20 @@
 class Protomcp < Formula
   desc "Language-agnostic MCP runtime"
   homepage "https://github.com/msilverblatt/protomcp"
-  version "0.2.0"
+  version "0.3.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/msilverblatt/protomcp/releases/download/v0.2.0/pmcp_darwin_amd64.tar.gz"
-      sha256 "99cec9147f3d7df4597397888fe30bad5e919ff88298930f2bbd5c68a1196315"
+      url "https://github.com/msilverblatt/protomcp/releases/download/v0.3.0/pmcp_darwin_amd64.tar.gz"
+      sha256 "8418626576785b044ff02aa5b05651ff5e5dfbd8bded2f873b3b277df247052a"
 
       define_method(:install) do
         bin.install "pmcp"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/msilverblatt/protomcp/releases/download/v0.2.0/pmcp_darwin_arm64.tar.gz"
-      sha256 "c91eb1004041e9c6a0bb054ec07d48eb22b878a5a9049f70d433c02401b75780"
+      url "https://github.com/msilverblatt/protomcp/releases/download/v0.3.0/pmcp_darwin_arm64.tar.gz"
+      sha256 "6dcd044850c35efac8095d288fd8b9160c64a3d608864edf30d13bc99981a2e1"
 
       define_method(:install) do
         bin.install "pmcp"
@@ -28,15 +28,15 @@ class Protomcp < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/msilverblatt/protomcp/releases/download/v0.2.0/pmcp_linux_amd64.tar.gz"
-      sha256 "1d13ee4adccd43b7c4c4886973c2ba7f2e081a8348d8d6fbd3e6872f665314ee"
+      url "https://github.com/msilverblatt/protomcp/releases/download/v0.3.0/pmcp_linux_amd64.tar.gz"
+      sha256 "b70167ef6a7f2a3230cd2a31f58b403978aa0770a09cc6b2631948711d12604b"
       define_method(:install) do
         bin.install "pmcp"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/msilverblatt/protomcp/releases/download/v0.2.0/pmcp_linux_arm64.tar.gz"
-      sha256 "f896b92493a497b093c56ca89106c5e2d8d3025636105f14c1771ebd1e385942"
+      url "https://github.com/msilverblatt/protomcp/releases/download/v0.3.0/pmcp_linux_arm64.tar.gz"
+      sha256 "983d75546d6f9ad7739cf584585ce29c5f7af1c96843cb61c3432410a608cd0c"
       define_method(:install) do
         bin.install "pmcp"
       end
